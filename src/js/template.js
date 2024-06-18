@@ -57,6 +57,17 @@ const tpl = ` <link href="https://fonts.googleapis.com/icon?family=Material+Icon
                     <span class="material-icons">ads_click</span>
                     <span class="asw-translate">Bigger Cursor</span>
                 </button>
+
+                <button class="asw-btn" type="button"onclick="window.ASM.readability()">
+                    <span class="material-icons">article</span>
+                    <span class="asw-translate">Redable Mode</span>
+                </button>
+
+                <button class="asw-btn" type="button"onclick="window.ASM.monochrome()">
+                    <span class="material-icons">monochrome_photos</span>
+                    <span class="asw-translate">Monochrome Mode</span>
+                </button>
+
                 <button class="asw-btn" type="button"onclick="window.ASM.adjustContrast()">
                     <span class="material-icons">contrast</span>
                     <span class="asw-translate">Contrast</span>

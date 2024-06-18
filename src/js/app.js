@@ -1,5 +1,6 @@
 import '../scss/app.scss'
 
+import Readability from '@mozilla/readability'
 import template from './template'
 
 class ASM {
@@ -396,15 +397,52 @@ class ASM {
     ASM.adjustContrast(true);
   }
 
+  static readability() {
+    const container = document.getElementById('AsmReadable')
+    if (container) {
+      if (container.style.display === 'none') {
+        container.style.display = 'block'
+      } else {
+        container.style.display = 'none'
+      }
+
+      return
+    }
+
+    const documentClone = document.cloneNode(true);
+    const article = new Readability.Readability(documentClone).parse();
+
+    const r = document.createElement('div')
+    r.setAttribute('id', 'AsmReadable')
+    r.classList.add('asm-redable-content')
+    r.innerHTML = `<h1>${article.title}</h1>${article.content}`
+
+    document.getElementsByTagName('body')[0].appendChild(r)
+  }
+
+  static monochrome() {
+    const container = document.getElementsByTagName('html')[0]
+    if (container.style.filter = 'grayscale(1)') {
+      container.style.filter = 'grayscale(1)'
+    } else {
+      container.style.filter = null
+    }
+  }
+
   static reset() {
     localStorage.clear();
     ASM.init()
-    ASM.hideMenu()
+    //ASM.hideMenu()
   }
 }
 
 
 const init = () => {
+  const container = document.getElementById('Asm')
+  if (container) {
+    return;
+  }
+
   const body = document.getElementsByTagName('body')[0]
   const asm = document.createElement('div')
   asm.setAttribute('id', 'Asm')

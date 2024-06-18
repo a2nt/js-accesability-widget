@@ -14,12 +14,12 @@
       },
       "modules": {
         "byIdentifier": {
-          "./node_modules/.pnpm/html-webpack-plugin@5.5.3_webpack@5.88.2/node_modules/html-webpack-plugin/lib/loader.js!./src/index.html": 210,
+          "./node_modules/.pnpm/html-webpack-plugin@5.5.3_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/html-webpack-plugin/lib/loader.js!./src/index.html": 381,
           "javascript/esm|data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;": 163
         },
         "usedIds": [
           163,
-          210
+          381
         ]
       }
     }
@@ -37,10 +37,16 @@
   },
   "modules": {
     "byIdentifier": {
-      "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./src/js/app.js|cc181e1d497e53db538644fecf37ed59": 196
+      "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/@mozilla+readability@0.5.0/node_modules/@mozilla/readability/Readability-readerable.js": 998,
+      "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/@mozilla+readability@0.5.0/node_modules/@mozilla/readability/Readability.js": 656,
+      "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/@mozilla+readability@0.5.0/node_modules/@mozilla/readability/index.js": 698,
+      "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./src/js/app.js|0374bc5ebb60c5561583f2cd39171ca5": 493
     },
     "usedIds": [
-      196
+      493,
+      656,
+      698,
+      998
     ]
   }
 }
