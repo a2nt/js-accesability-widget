@@ -1,0 +1,46 @@
+{
+  "HtmlWebpackCompiler": [
+    {
+      "chunks": {
+        "byName": {
+          "HtmlWebpackPlugin_0-0": 563
+        },
+        "bySource": {
+          "0 HtmlWebpackPlugin_0-0": 563
+        },
+        "usedIds": [
+          563
+        ]
+      },
+      "modules": {
+        "byIdentifier": {
+          "./node_modules/.pnpm/html-webpack-plugin@5.5.3_webpack@5.88.2/node_modules/html-webpack-plugin/lib/loader.js!./src/index.html": 210,
+          "javascript/esm|data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;": 163
+        },
+        "usedIds": [
+          163,
+          210
+        ]
+      }
+    }
+  ],
+  "chunks": {
+    "byName": {
+      "app": 143
+    },
+    "bySource": {
+      "0 app": 143
+    },
+    "usedIds": [
+      143
+    ]
+  },
+  "modules": {
+    "byIdentifier": {
+      "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./src/js/app.js|cc181e1d497e53db538644fecf37ed59": 196
+    },
+    "usedIds": [
+      196
+    ]
+  }
+}
