@@ -40,10 +40,10 @@
       "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/@mozilla+readability@0.5.0/node_modules/@mozilla/readability/Readability-readerable.js": 998,
       "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/@mozilla+readability@0.5.0/node_modules/@mozilla/readability/Readability.js": 656,
       "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/@mozilla+readability@0.5.0/node_modules/@mozilla/readability/index.js": 698,
-      "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./src/js/app.js|0374bc5ebb60c5561583f2cd39171ca5": 493
+      "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./src/js/app.js|82261a1b9ab61196ef4f940006e009c9": 369
     },
     "usedIds": [
-      493,
+      369,
       656,
       698,
       998

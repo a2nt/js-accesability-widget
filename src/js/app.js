@@ -1,6 +1,7 @@
 import '../scss/app.scss'
 
-import Readability from '@mozilla/readability'
+import ReadabilityInterface from 'modules/ReadabilityInterface'
+import SpeechInterface from 'modules/SpeechInterface'
 import template from './template'
 
 class ASM {
@@ -40,6 +41,7 @@ class ASM {
 
   static adjustFontSize(multiply = 0) {
     const storedPercentage = parseFloat(localStorage.getItem('fontPercentage'));
+
     if (multiply) {
       if (storedPercentage) {
         const newPercentage = storedPercentage + multiply;
@@ -49,10 +51,11 @@ class ASM {
         localStorage.setItem('fontPercentage', newPercentage);
       }
     }
+
     document
       .querySelectorAll("*")
       .forEach((el) => {
-        if (ASM.checkClasslist(el.classList)) {
+        if (this.checkClasslist(el.classList)) {
           let orgFontSize = parseFloat(el.getAttribute('data-asw-orgFontSize'));
 
           if (!orgFontSize) {
@@ -80,7 +83,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (ASM.checkClasslist(el.classList)) {
+          if (this.checkClasslist(el.classList)) {
             let orgLetterSpacing = el.getAttribute('data-asw-orgLetterSpacing');
 
             if (!orgLetterSpacing) {
@@ -101,7 +104,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (ASM.checkClasslist(el.classList)) {
+          if (this.checkClasslist(el.classList)) {
             const orgLetterSpacing = el.getAttribute('data-asw-orgLetterSpacing');
             if (orgLetterSpacing) {
               el.style['letter-spacing'] = orgLetterSpacing;
@@ -127,10 +130,11 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (ASM.checkClasslist(el.classList)) {
+          if (this.checkClasslist(el.classList)) {
             orgFontFamily = el.style['font-family'];
             el.setAttribute('data-asw-orgFontFamily', orgFontFamily);
-            el.style['font-family'] = 'OpenDyslexic3';
+            //el.style['font-family'] = 'OpenDyslexic3';
+            el.style['font-family'] = 'Arial';
           }
         });
 
@@ -139,7 +143,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (ASM.checkClasslist(el.classList)) {
+          if (this.checkClasslist(el.classList)) {
             orgFontFamily = el.getAttribute('data-asw-orgFontFamily');
             if (orgFontFamily) {
               el.style['font-family'] = orgFontFamily;
@@ -258,7 +262,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (ASM.checkClasslist(el.classList)) {
+          if (this.checkClasslist(el.classList)) {
             let orgLineHeight = el.getAttribute('data-asw-orgLineHeight');
 
             if (!orgLineHeight) {
@@ -279,7 +283,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (ASM.checkClasslist(el.classList)) {
+          if (this.checkClasslist(el.classList)) {
             const orgLineHeight = el.getAttribute('data-asw-orgLineHeight');
             if (orgLineHeight) {
               el.style['line-height'] = orgLineHeight;
@@ -307,7 +311,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (ASM.checkClasslist(el.classList)) {
+          if (this.checkClasslist(el.classList)) {
             let orgBoldFontWeight = window.getComputedStyle(el).getPropertyValue('--org-bold-font-weight');
             if (!orgBoldFontWeight) {
               orgBoldFontWeight = window.getComputedStyle(el).getPropertyValue('font-weight');
@@ -322,7 +326,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (ASM.checkClasslist(el.classList)) {
+          if (this.checkClasslist(el.classList)) {
             const orgBoldFontWeight = window.getComputedStyle(el).getPropertyValue('--org-bold-font-weight');
             if (orgBoldFontWeight) {
               el.style['font-weight'] = orgBoldFontWeight;
@@ -385,54 +389,62 @@ class ASM {
     }
   }
 
-  static init() {
-    ASM.adjustFontSize();
-    ASM.adjustLetterSpacing();
-    ASM.enableDyslexicFont(true);
-    ASM.enableBigCursor(true);
-    ASM.enableHighlightLinks(true);
-    ASM.enableHighlightHeadings(true);
-    ASM.adjustLineHeight();
-    ASM.adjustFontWeight();
-    ASM.adjustContrast(true);
+  static redableText() {
+    this.adjustLineHeight(1)
+    this.adjustLetterSpacing(0.1)
+    this.enableDyslexicFont()
   }
 
-  static readability() {
-    const container = document.getElementById('AsmReadable')
-    if (container) {
-      if (container.style.display === 'none') {
-        container.style.display = 'block'
-      } else {
-        container.style.display = 'none'
-      }
+  static init() {
+    this.adjustFontSize()
+    this.adjustLetterSpacing()
+    this.enableDyslexicFont(true)
+    this.enableBigCursor(true)
+    this.enableHighlightLinks(true)
+    this.enableHighlightHeadings(true)
+    this.adjustLineHeight()
+    this.adjustFontWeight()
+    this.adjustContrast(true)
+  }
 
+  static #redability
+  static readability() {
+    if (!this.#redability) {
+      this.#redability = new ReadabilityInterface()
+    }
+
+    this.#redability.toggle()
+  }
+
+  static #speechInterface
+  static speech() {
+    if (!this.#speechInterface || !this.#speechInterface.active) {
+      this.#speechInterface = new SpeechInterface()
       return
     }
 
-    const documentClone = document.cloneNode(true);
-    const article = new Readability.Readability(documentClone).parse();
-
-    const r = document.createElement('div')
-    r.setAttribute('id', 'AsmReadable')
-    r.classList.add('asm-redable-content')
-    r.innerHTML = `<h1>${article.title}</h1>${article.content}`
-
-    document.getElementsByTagName('body')[0].appendChild(r)
+    if (this.#speechInterface.active) {
+      this.#speechInterface.destroy()
+    }
   }
 
   static monochrome() {
     const container = document.getElementsByTagName('html')[0]
-    if (container.style.filter = 'grayscale(1)') {
-      container.style.filter = 'grayscale(1)'
-    } else {
+    if (container.style.filter === 'grayscale(1)') {
       container.style.filter = null
+    } else {
+      container.style.filter = 'grayscale(1)'
     }
   }
 
   static reset() {
+    if (this.#redability) {
+      this.#redability.hide()
+    }
+
     localStorage.clear();
-    ASM.init()
-    //ASM.hideMenu()
+    this.init()
+    //this.hideMenu()
   }
 }
 

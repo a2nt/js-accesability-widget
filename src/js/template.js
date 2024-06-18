@@ -1,4 +1,18 @@
-const tpl = ` <link href="https://fonts.googleapis.com/icon?family=Material+Icons&amp;text=ads_click,text_rotation_none,text_fields,format_size,blind,restart_alt,close,link,local_parking,contrast,spellcheck,local_library,format_bold,format_line_spacing" rel="stylesheet">
+/*
+<button class="asw-btn" type="button" onclick="window.ASM.adjustLineHeight(1)">
+    <span class="material-icons">format_line_spacing</span>
+    <span class="asw-translate">Line Spacing</span>
+</button>
+<button class="asw-btn" type="button" onclick="window.ASM.adjustLetterSpacing(0.1)">
+    <span class="material-icons">text_rotation_none</span>
+    <span class="asw-translate">Letter Spacing</span>
+</button>
+<button class="asw-btn" type="button" onclick="window.ASM.enableDyslexicFont()">
+    <span class="material-icons">spellcheck</span>
+    <span class="asw-translate">Dyslexic Font</span>
+</button>
+*/
+const tpl = `<link href="https://fonts.googleapis.com/icon?family=Material+Icons&amp;text=ads_click,text_rotation_none,text_fields,format_size,blind,restart_alt,close,link,local_parking,contrast,spellcheck,local_library,format_bold,format_line_spacing" rel="stylesheet">
 <div class="asw-menu" style="display: none;" id="aswMenu">
     <div class="asw-menu-header">
         <div class="asw-translate">
@@ -21,6 +35,14 @@ const tpl = ` <link href="https://fonts.googleapis.com/icon?family=Material+Icon
     <div class="asw-menu-content">
         <div class="asw-card">
             <div class="asw-items content">
+                <button class="asw-btn" type="button" onclick="window.ASM.speech()">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <span class="asw-translate">Speak on click</span>
+                </button>
+                <button class="asw-btn" type="button" onclick="window.ASM.redableText()">
+                    <span class="material-icons">spellcheck</span>
+                    <span class="asw-translate">Redable Font</span>
+                </button>
                 <button class="asw-btn" type="button" onclick="window.ASM.adjustFontSize(0.1)">
                     <span class="material-icons">format_size</span>
                     <span class="asw-translate">Increase Font Size</span>
@@ -28,18 +50,6 @@ const tpl = ` <link href="https://fonts.googleapis.com/icon?family=Material+Icon
                 <button class="asw-btn" type="button"onclick="window.ASM.adjustFontSize(-0.1)">
                     <span class="material-icons">text_fields</span>
                     <span class="asw-translate">Decrease Font Size</span>
-                </button>
-                <button class="asw-btn" type="button" onclick="window.ASM.adjustLineHeight(1)">
-                    <span class="material-icons">format_line_spacing</span>
-                    <span class="asw-translate">Line Spacing</span>
-                </button>
-                <button class="asw-btn" type="button" onclick="window.ASM.adjustLetterSpacing(0.1)">
-                    <span class="material-icons">text_rotation_none</span>
-                    <span class="asw-translate">Letter Spacing</span>
-                </button>
-                <button class="asw-btn" type="button" onclick="window.ASM.enableDyslexicFont()">
-                    <span class="material-icons">spellcheck</span>
-                    <span class="asw-translate">Dyslexic Font</span>
                 </button>
                 <button class="asw-btn" type="button" onclick="window.ASM.enableHighlightHeadings()">
                     <span class="material-icons">local_parking</span>

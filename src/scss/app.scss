@@ -1,5 +1,10 @@
 @import "./variables";
 
+/*@font-face {
+    font-family: "OpenDyslexic3";
+    src: url("https://website-widgets.pages.dev/fonts/OpenDyslexic3-Regular.woff") format("woff"), url("https://website-widgets.pages.dev/fonts/OpenDyslexic3-Regular.ttf") format("truetype");
+}*/
+
 .asw-menu {
     line-height: 1;
     position: fixed;
@@ -171,11 +176,6 @@
     overflow: scroll;
     z-index: 9990;
     padding: 2rem;
-}
-
-@font-face {
-    font-family: "OpenDyslexic3";
-    src: url("https://website-widgets.pages.dev/fonts/OpenDyslexic3-Regular.woff") format("woff"), url("https://website-widgets.pages.dev/fonts/OpenDyslexic3-Regular.ttf") format("truetype");
 }
 
 @media only screen and (max-width: 560px) {
