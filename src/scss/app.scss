@@ -21,13 +21,15 @@
 }
 
 .asw-menu-header {
-    font-size: 18px;
     font-weight: 700;
     display: flex;
-    height: 60px;
-    padding-left: 18px;
-    color: $black;
+    background: $branded-bg;
+    color: $branded-color;
     border-bottom: 1px solid #dedede;
+
+    font-size: 1rem;
+    height: 3em;
+    padding-left: 1rem;
 
     align-items: center;
     justify-content: space-between;
@@ -43,13 +45,11 @@
         justify-content: center;
         text-transform: uppercase;
         gap: 1rem;
-
         cursor: pointer;
-        color: $black;
 
         &:hover,
         &:focus {
-            color: $branded-bg;
+            opacity: .5;
         }
     }
 }
