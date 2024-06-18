@@ -442,6 +442,10 @@ class ASM {
       this.#redability.hide()
     }
 
+    if (this.#speechInterface && this.#speechInterface.active) {
+      this.#speechInterface.destroy()
+    }
+
     localStorage.clear();
     this.init()
     //this.hideMenu()
