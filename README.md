@@ -1,14 +1,12 @@
-# meta-lightbox
+# js-accesability-widget
 
-Vanilla Universal lightbox.
-Compatible with bootstrap 5 and fontawesome
+Vanilla Accesability Widget.
 
 ## Requirements
-+ Axios (https://github.com/axios/axios)
+No requirements, vanilla JS
 
 
 ## Demo
-
-https://rawcdn.githack.com/a2nt/meta-lightbox/master/dist/index.html
+https://rawcdn.githack.com/a2nt/js-accesability-widget/master/dist/index.html
 
 It's module of UI kit (https://github.com/a2nt/webpack-bootstrap-ui-kit), but can be used independently.
