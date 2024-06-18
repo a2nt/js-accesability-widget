@@ -23,6 +23,9 @@ importers:
       material-design-color:
         specifier: ^2.3.2
         version: 2.3.2
+      simple-keyboard:
+        specifier: ^3.7.86
+        version: 3.7.86
       youtube-embed:
         specifier: ^1.0.0
         version: 1.0.0
@@ -5148,6 +5151,9 @@ packages:
 
   simple-get@4.0.1:
     resolution: {integrity: sha512-brv7p5WgH0jmQJr1ZDDfKDOSeWWg+OVypG99A/5vYGPqJ6pxiaHLy8nxtFjBA7oMa01ebA9gfh1uMCFqOuXxvA==}
+
+  simple-keyboard@3.7.86:
+    resolution: {integrity: sha512-IniNHzQ8BnJkykp8xnUEnAD2+Ujyqsk0HgwtANymrsLu9v0ezyZeKWY4ttHXkGQf95UuSlQMP0BWE2r0X5dCSQ==}
 
   simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
@@ -11650,6 +11656,8 @@ snapshots:
       decompress-response: 6.0.0
       once: 1.4.0
       simple-concat: 1.0.1
+
+  simple-keyboard@3.7.86: {}
 
   simple-swizzle@0.2.2:
     dependencies:

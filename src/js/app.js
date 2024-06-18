@@ -2,6 +2,7 @@ import '../scss/app.scss'
 
 import ReadabilityInterface from 'modules/ReadabilityInterface'
 import SpeechInterface from 'modules/SpeechInterface'
+import ScreenKeyboard from 'modules/ScreenKeyboard'
 import template from './template'
 
 class ASM {
@@ -428,6 +429,18 @@ class ASM {
     }
   }
 
+  static #screenKeyboard
+  static keyboard() {
+    if (!this.#screenKeyboard || !this.#screenKeyboard.active) {
+      this.#screenKeyboard = new ScreenKeyboard()
+      return
+    }
+
+    if (this.#screenKeyboard.active) {
+      this.#screenKeyboard.destroy()
+    }
+  }
+
   static monochrome() {
     const container = document.getElementsByTagName('html')[0]
     if (container.style.filter === 'grayscale(1)') {
@@ -459,7 +472,7 @@ const init = () => {
     return;
   }
 
-  const body = document.getElementsByTagName('body')[0]
+  const body = document.body
   const asm = document.createElement('div')
   asm.setAttribute('id', 'Asm')
   asm.innerHTML = template

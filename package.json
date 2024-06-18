@@ -53,6 +53,7 @@
     "es6-template": "^1.0.4",
     "eslint-scope": "^7.2.2",
     "material-design-color": "^2.3.2",
+    "simple-keyboard": "^3.7.86",
     "youtube-embed": "^1.0.0"
   },
   "devDependencies": {

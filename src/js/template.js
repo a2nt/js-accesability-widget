@@ -46,6 +46,10 @@ const tpl = `<div class="asw-menu" style="display: none;" id="aswMenu">
                     <i class="fa-solid fa-minus"></i>
                     <span class="asw-translate">Decrease Size</span>
                 </button>
+                <button class="asw-btn" type="button" onclick="window.ASM.keyboard()">
+                    <i class="fa-solid fa-keyboard"></i>
+                    <span class="asw-translate">Screen Keyboard</span>
+                </button>
                 <button class="asw-btn" type="button" onclick="window.ASM.enableHighlightHeadings()">
                     <i class="fa-solid fa-heading"></i>
                     <span class="asw-translate">Highlight Headings</span>

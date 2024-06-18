@@ -5,6 +5,13 @@
     src: url("https://website-widgets.pages.dev/fonts/OpenDyslexic3-Regular.woff") format("woff"), url("https://website-widgets.pages.dev/fonts/OpenDyslexic3-Regular.ttf") format("truetype");
 }*/
 
+.asw-keyboard {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-width: 30rem;
+}
+
 .asw-menu {
     line-height: 1;
     position: fixed;

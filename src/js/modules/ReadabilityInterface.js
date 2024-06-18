@@ -13,7 +13,7 @@ class ReadabilityInterface {
       this.#container.classList.add('asm-redable-content')
       this.#container.style.display = 'none'
 
-      document.getElementsByTagName('body')[0].appendChild(this.#container)
+      document.body.appendChild(this.#container)
     }
   }
 
