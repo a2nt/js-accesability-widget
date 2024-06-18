@@ -4,13 +4,39 @@ import template from './template'
 
 class ASM {
   static toggleMenu() {
-    var menu = document.getElementById("aswMenu");
-    if (menu.style.display === "none") {
-      menu.style.display = "block";
+    const menu = document.getElementById('aswMenu')
+
+    if (menu.style.display === 'none') {
+      menu.style.display = 'block'
     } else {
-      menu.style.display = "none";
+      menu.style.display = 'none'
     }
   }
+
+  static hideMenu() {
+    const menu = document.getElementById('aswMenu')
+    menu.style.display = 'none'
+  }
+
+  static checkClasslist(classList) {
+    const blockedClasses = [
+      'material-icons',
+      'fa-solid',
+      'fa',
+      'asw-btn',
+      'asw-translate',
+    ]
+
+    let allowed = true
+    blockedClasses.forEach((cls) => {
+      if (classList.contains(cls)) {
+        allowed = false
+      }
+    })
+
+    return allowed
+  }
+
   static adjustFontSize(multiply = 0) {
     const storedPercentage = parseFloat(localStorage.getItem('fontPercentage'));
     if (multiply) {
@@ -25,7 +51,7 @@ class ASM {
     document
       .querySelectorAll("*")
       .forEach((el) => {
-        if (!el.classList.contains('material-icons')) {
+        if (ASM.checkClasslist(el.classList)) {
           let orgFontSize = parseFloat(el.getAttribute('data-asw-orgFontSize'));
 
           if (!orgFontSize) {
@@ -53,8 +79,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (!el.classList.contains('material-icons')) {
-
+          if (ASM.checkClasslist(el.classList)) {
             let orgLetterSpacing = el.getAttribute('data-asw-orgLetterSpacing');
 
             if (!orgLetterSpacing) {
@@ -75,7 +100,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (!el.classList.contains('material-icons')) {
+          if (ASM.checkClasslist(el.classList)) {
             const orgLetterSpacing = el.getAttribute('data-asw-orgLetterSpacing');
             if (orgLetterSpacing) {
               el.style['letter-spacing'] = orgLetterSpacing;
@@ -101,9 +126,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          const classList = el.classList
-          // skip icon fonts
-          if (!classList.contains('material-icons') && !classList.contains('fa-solid') && !classList.contains('fa')) {
+          if (ASM.checkClasslist(el.classList)) {
             orgFontFamily = el.style['font-family'];
             el.setAttribute('data-asw-orgFontFamily', orgFontFamily);
             el.style['font-family'] = 'OpenDyslexic3';
@@ -115,7 +138,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (!el.classList.contains('material-icons')) {
+          if (ASM.checkClasslist(el.classList)) {
             orgFontFamily = el.getAttribute('data-asw-orgFontFamily');
             if (orgFontFamily) {
               el.style['font-family'] = orgFontFamily;
@@ -234,7 +257,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (!el.classList.contains('material-icons')) {
+          if (ASM.checkClasslist(el.classList)) {
             let orgLineHeight = el.getAttribute('data-asw-orgLineHeight');
 
             if (!orgLineHeight) {
@@ -255,7 +278,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (!el.classList.contains('material-icons')) {
+          if (ASM.checkClasslist(el.classList)) {
             const orgLineHeight = el.getAttribute('data-asw-orgLineHeight');
             if (orgLineHeight) {
               el.style['line-height'] = orgLineHeight;
@@ -283,7 +306,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (!el.classList.contains('material-icons')) {
+          if (ASM.checkClasslist(el.classList)) {
             let orgBoldFontWeight = window.getComputedStyle(el).getPropertyValue('--org-bold-font-weight');
             if (!orgBoldFontWeight) {
               orgBoldFontWeight = window.getComputedStyle(el).getPropertyValue('font-weight');
@@ -298,7 +321,7 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (!el.classList.contains('material-icons')) {
+          if (ASM.checkClasslist(el.classList)) {
             const orgBoldFontWeight = window.getComputedStyle(el).getPropertyValue('--org-bold-font-weight');
             if (orgBoldFontWeight) {
               el.style['font-weight'] = orgBoldFontWeight;
@@ -376,6 +399,7 @@ class ASM {
   static reset() {
     localStorage.clear();
     ASM.init()
+    ASM.hideMenu()
   }
 }
 

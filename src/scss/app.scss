@@ -35,17 +35,22 @@
     >div {
         display: flex;
     }
-}
 
-.asw-menu-header div[role="button"] {
-    padding: 12px;
-    cursor: pointer;
-    color: $black;
+    div[role="button"] {
+        padding: .5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        gap: 1rem;
 
-    &:hover,
-    &:focus {
-        opacity: .8;
+        cursor: pointer;
         color: $black;
+
+        &:hover,
+        &:focus {
+            color: $branded-bg;
+        }
     }
 }
 

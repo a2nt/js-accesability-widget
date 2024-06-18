@@ -6,6 +6,7 @@ const tpl = ` <link href="https://fonts.googleapis.com/icon?family=Material+Icon
         </div>
         <div>
             <div role="button" class="asw-menu-reset"  title="Reset settings" onclick="window.ASM.reset()">
+                Reset
                 <span class="material-icons" >
                     restart_alt
                 </span>
