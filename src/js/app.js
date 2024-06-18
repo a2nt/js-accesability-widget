@@ -101,7 +101,9 @@ class ASM {
       document
         .querySelectorAll("*")
         .forEach((el) => {
-          if (!el.classList.contains('material-icons')) {
+          const classList = el.classList
+          // skip icon fonts
+          if (!classList.contains('material-icons') && !classList.contains('fa-solid') && !classList.contains('fa')) {
             orgFontFamily = el.style['font-family'];
             el.setAttribute('data-asw-orgFontFamily', orgFontFamily);
             el.style['font-family'] = 'OpenDyslexic3';

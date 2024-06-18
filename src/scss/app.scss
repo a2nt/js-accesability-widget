@@ -1,22 +1,23 @@
 @import "./variables";
 
 .asw-menu {
-    font-size: 16px;
     line-height: 1;
     position: fixed;
     z-index: 500000;
-    top: 20px;
-    right: 20px;
     overflow: hidden;
-    width: 500px;
-    height: calc(100% - 40px - 75px);
-    transition: .3s;
+    transition: .3s ease-in-out;
     letter-spacing: .015em;
     opacity: 1;
     color: $black;
-    border-radius: 8px;
     background: #f9f9f9;
     box-shadow: 0 0 20px #000800;
+
+    width: 30rem;
+    font-size: 1rem;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9992;
 }
 
 .asw-menu-header {
@@ -116,14 +117,8 @@
 }
 
 .asw-menu-btn {
-    font-size: 2rem;
     position: fixed;
-    z-index: 500000;
-    right: 20px;
-    bottom: 20px;
     display: flex;
-    width: 54px;
-    height: 54px;
     cursor: pointer;
     transition: .3s;
     transform: scale(1);
@@ -137,6 +132,14 @@
 
     align-items: center;
     justify-content: center;
+
+    left: 1rem;
+    bottom: 1rem;
+    font-size: 2rem;
+    width: 2em;
+    height: 2em;
+
+    z-index: 9991;
 
     &:hover,
     &:focus {

@@ -2,7 +2,7 @@ const tpl = ` <link href="https://fonts.googleapis.com/icon?family=Material+Icon
 <div class="asw-menu" style="display: none;" id="aswMenu">
     <div class="asw-menu-header">
         <div class="asw-translate">
-            Accessibility Menu
+            Accessibility Tools
         </div>
         <div>
             <div role="button" class="asw-menu-reset"  title="Reset settings" onclick="window.ASM.reset()">
