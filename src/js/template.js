@@ -12,6 +12,7 @@
     <span class="asw-translate">Dyslexic Font</span>
 </button>
 */
+const accessibilityNote = document.querySelector('.asw-note')
 const tpl = `<div class="asw-menu" style="display: none;" id="aswMenu">
     <div class="asw-menu-header">
         <div class="asw-translate">
@@ -87,7 +88,7 @@ const tpl = `<div class="asw-menu" style="display: none;" id="aswMenu">
             </div>
         </div>
     </div>
-
+    ${accessibilityNote ? `<div class="asw-menu-footer">${accessibilityNote.innerHTML}</div>` : ''}
 </div>
 
 

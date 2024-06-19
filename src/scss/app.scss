@@ -18,23 +18,28 @@
     min-width: 30rem;
 }
 
+.asw-note {
+    display: none;
+}
+
 .asw-menu {
     line-height: 1;
     position: fixed;
-    overflow: hidden;
     transition: .3s ease-in-out;
     letter-spacing: .015em;
     opacity: 1;
     color: $black;
     background: #f9f9f9;
     box-shadow: 0 0 20px #000800;
-
     width: 30rem;
     font-size: 1rem;
     top: 0;
     right: 0;
     bottom: 0;
     z-index: 999992;
+    max-height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .asw-menu-header {
@@ -122,10 +127,8 @@
 }
 
 .asw-menu-content {
-    overflow-y: scroll;
     padding: 1rem 0;
     color: #333;
-    max-height: calc(100vh - 2rem);
 }
 
 .asw-widget,
@@ -172,6 +175,13 @@
 
 .asw-menu-btn i::before {
     margin: 0;
+}
+
+.asw-menu-footer {
+    padding: .5rem 1rem;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.5;
 }
 
 .asm-redable-content {

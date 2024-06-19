@@ -30,6 +30,10 @@ class SpeechInterface {
     }
 
     document.addEventListener('click', SpeechInterface.speakEvent)
+
+    // speak links on Tab
+    document.querySelectorAll('a,button').forEach((el) => el.addEventListener('focus', SpeechInterface.speakEvent))
+
     this.active = true
   }
 
@@ -38,6 +42,7 @@ class SpeechInterface {
 
     window.speechSynthesis.cancel()
     document.removeEventListener('click', SpeechInterface.speakEvent)
+    document.querySelectorAll('a,button').forEach((el) => el.removeEventListener('focus', SpeechInterface.speakEvent))
   }
 
   static speakEvent(e) {
