@@ -50,6 +50,10 @@ const tpl = `<div class="asw-menu" style="display: none;" id="aswMenu">
                     <i class="fa-solid fa-keyboard"></i>
                     <span class="asw-translate">Screen Keyboard</span>
                 </button>
+                <button class="asw-btn" type="button" onclick="window.ASM.magnifier()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span class="asw-translate">Magnifier</span>
+                </button>
                 <button class="asw-btn" type="button" onclick="window.ASM.enableHighlightHeadings()">
                     <i class="fa-solid fa-heading"></i>
                     <span class="asw-translate">Highlight Headings</span>

@@ -1,6 +1,6 @@
 {
   "name": "@a2nt/js-accesability-widget",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Accesability widget",
   "author": "Tony Air <tony@twma.pro>",
   "license": "BSD-2-Clause",
@@ -52,6 +52,7 @@
     "@mozilla/readability": "^0.5.0",
     "es6-template": "^1.0.4",
     "eslint-scope": "^7.2.2",
+    "html-magnifier": "^2.0.3",
     "material-design-color": "^2.3.2",
     "simple-keyboard": "^3.7.86",
     "youtube-embed": "^1.0.0"

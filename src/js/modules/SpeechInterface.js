@@ -3,7 +3,7 @@ class SpeechInterface {
 
   constructor() {
     if (this.active) {
-      return
+      return this
     }
 
     document.addEventListener('click', SpeechInterface.speakEvent)

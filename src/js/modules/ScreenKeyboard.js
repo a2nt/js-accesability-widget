@@ -9,7 +9,7 @@ class ScreenKeyboard {
 
   constructor() {
     if (this.active) {
-      return
+      return this
     }
 
     ScreenKeyboard.#keyboardContainer = document.createElement('div')

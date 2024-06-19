@@ -20,6 +20,9 @@ importers:
       eslint-scope:
         specifier: ^7.2.2
         version: 7.2.2
+      html-magnifier:
+        specifier: ^2.0.3
+        version: 2.0.3
       material-design-color:
         specifier: ^2.3.2
         version: 2.3.2
@@ -3126,6 +3129,9 @@ packages:
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       webpack: ^5.0.0
+
+  html-magnifier@2.0.3:
+    resolution: {integrity: sha512-y+witgSSD0nYdDkhkm6OmUyQh3MHx1PjD/kN6BWbWsvOzBiL+GbOX3CeTf9A6XJPHArYFlOIUrivUDE7uHW5vQ==}
 
   html-minifier-terser@6.1.0:
     resolution: {integrity: sha512-YXxSlJBZTP7RS3tWnQw74ooKa6L9b9i9QYXY21eUEvhZ3u9XLfv6OnFsQq6RxkhHygsaUMvYsZRV5rU/OVNZxw==}
@@ -9456,6 +9462,8 @@ snapshots:
       html-minifier-terser: 7.2.0
       parse5: 7.1.2
       webpack: 5.88.2(webpack-cli@5.1.4)
+
+  html-magnifier@2.0.3: {}
 
   html-minifier-terser@6.1.0:
     dependencies:

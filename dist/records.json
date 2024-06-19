@@ -40,14 +40,16 @@
       "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/@mozilla+readability@0.5.0/node_modules/@mozilla/readability/Readability-readerable.js": 998,
       "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/@mozilla+readability@0.5.0/node_modules/@mozilla/readability/Readability.js": 656,
       "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/@mozilla+readability@0.5.0/node_modules/@mozilla/readability/index.js": 698,
+      "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/html-magnifier@2.0.3/node_modules/html-magnifier/html-magnifier.js": 23,
       "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./node_modules/.pnpm/simple-keyboard@3.7.86/node_modules/simple-keyboard/build/index.js": 747,
-      "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./src/js/app.js|2a6fefe88327e67638f439f677e29050": 666
+      "./node_modules/.pnpm/babel-loader@9.1.3_@babel+core@7.22.9_webpack@5.88.2_webpack-cli@5.1.4_/node_modules/babel-loader/lib/index.js??ruleSet[1].rules[0].use!./src/js/app.js|ee6fe2df75e16f25d912ccc11f392193": 987
     },
     "usedIds": [
+      23,
       656,
-      666,
       698,
       747,
+      987,
       998
     ]
   }

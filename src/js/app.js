@@ -3,6 +3,7 @@ import '../scss/app.scss'
 import ReadabilityInterface from 'modules/ReadabilityInterface'
 import SpeechInterface from 'modules/SpeechInterface'
 import ScreenKeyboard from 'modules/ScreenKeyboard'
+import MagnifierInterface from 'modules/MagnifierInterface'
 import template from './template'
 
 class ASM {
@@ -438,6 +439,19 @@ class ASM {
 
     if (this.#screenKeyboard.active) {
       this.#screenKeyboard.destroy()
+    }
+  }
+
+  static #screenMagnifier
+  static magnifier() {
+    if (!this.#screenMagnifier || !this.#screenMagnifier.active) {
+      this.#screenMagnifier = new MagnifierInterface()
+      MagnifierInterface.show()
+      return
+    }
+
+    if (this.#screenMagnifier.active) {
+      this.#screenMagnifier.destroy()
     }
   }
 
