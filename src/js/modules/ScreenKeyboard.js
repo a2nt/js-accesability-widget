@@ -21,17 +21,35 @@ class ScreenKeyboard {
     ScreenKeyboard.#keyboardContainer.appendChild(el)
 
     document.body.appendChild(ScreenKeyboard.#keyboardContainer)
-
     ScreenKeyboard.update()
+
+    document.addEventListener('click', ScreenKeyboard.hideEvent)
 
     this.active = true
   }
 
   destroy() {
     this.active = false
-    document.removeEventListener('click', ScreenKeyboard.show)
+    document.querySelectorAll('input,textarea').forEach((el) => {
+      el.removeEventListener('focus', ScreenKeyboard.show)
+      el.removeEventListener('focusout', ScreenKeyboard.hideEvent)
+    })
+
+    document.removeEventListener('click', ScreenKeyboard.hideEvent)
   }
 
+  static hideEvent(e) {
+    const showTags = [
+      'input', 'textarea',
+    ]
+    const target = e.relatedTarget || e.explicitOriginalTarget || e.target
+    if (
+      target && target.tagName && !showTags.includes(target.tagName.toLowerCase())
+            && target.classList && !target.classList.contains('hg-button')
+    ) {
+      ScreenKeyboard.hide()
+    }
+  }
 
   static update() {
     document.querySelectorAll('input,textarea').forEach((el) => {
@@ -41,12 +59,7 @@ class ScreenKeyboard {
 
       el.addEventListener('focus', ScreenKeyboard.show)
 
-      el.addEventListener('focusout', (e) => {
-        const target = e.relatedTarget || e.explicitOriginalTarget
-        if (target && target.classList && !target.classList.contains('hg-button')) {
-          ScreenKeyboard.hide()
-        }
-      })
+      el.addEventListener('focusout', ScreenKeyboard.hideEvent)
 
       el.addEventListener('change', (e) => {
         if (ScreenKeyboard.#keyboard) {
