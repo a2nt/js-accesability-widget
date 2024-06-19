@@ -5,6 +5,12 @@
     src: url("https://website-widgets.pages.dev/fonts/OpenDyslexic3-Regular.woff") format("woff"), url("https://website-widgets.pages.dev/fonts/OpenDyslexic3-Regular.ttf") format("truetype");
 }*/
 
+.magnifier-content {
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: scroll !important;
+}
+
 .asw-keyboard {
     position: fixed;
     bottom: 0;

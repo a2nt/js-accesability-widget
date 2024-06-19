@@ -17,6 +17,12 @@ class MagnifierInterface {
       height: 200,
     })
 
+    MagnifierInterface.#magnifier.on('syncScrollBars', (magnifierContent) => {
+      magnifierContent.parentElement.scrollTop = document.scrollingElement.scrollTop
+      magnifierContent.parentElement.scrollLeft = document.scrollingElement.scrollLeft
+    })
+
+
     this.active = true
   }
 

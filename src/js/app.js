@@ -447,7 +447,10 @@ class ASM {
     if (!this.#screenMagnifier || !this.#screenMagnifier.active) {
       this.#screenMagnifier = new MagnifierInterface()
       MagnifierInterface.show()
-      return
+
+      ASM.hideMenu()
+
+      return this
     }
 
     if (this.#screenMagnifier.active) {
