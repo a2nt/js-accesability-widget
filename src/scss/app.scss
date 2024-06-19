@@ -15,7 +15,6 @@
 .asw-menu {
     line-height: 1;
     position: fixed;
-    z-index: 500000;
     overflow: hidden;
     transition: .3s ease-in-out;
     letter-spacing: .015em;
@@ -29,7 +28,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 9992;
+    z-index: 999992;
 }
 
 .asw-menu-header {
@@ -156,7 +155,7 @@
     width: 2em;
     height: 2em;
 
-    z-index: 9991;
+    z-index: 999991;
 
     &:hover,
     &:focus {
@@ -181,8 +180,8 @@
     left: 0;
     right: 0;
     overflow: scroll;
-    z-index: 9990;
     padding: 2rem;
+    z-index: 99999;
 }
 
 @media only screen and (max-width: 560px) {
