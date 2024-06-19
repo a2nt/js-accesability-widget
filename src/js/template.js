@@ -18,11 +18,10 @@ const tpl = `<div class="asw-menu" style="display: none;" id="aswMenu">
             Accessibility Tools
         </div>
         <div>
-            <div role="button" class="asw-menu-reset"  title="Reset settings" onclick="window.ASM.reset()">
-                Reset
+            <div role="button" class="asw-menu-reset"  title="Reset Accesability Settings" onclick="window.ASM.reset()">
                 <i class="fa-solid fa-arrows-rotate"></i>
             </div>
-            <div role="button" class="asw-menu-close" title="Close" onclick="window.ASM.toggleMenu()">
+            <div role="button" class="asw-menu-close" title="Close Accesability Tools" onclick="window.ASM.toggleMenu()">
                 <i class="fa-solid fa-xmark"></i>
             </div>
         </div>
