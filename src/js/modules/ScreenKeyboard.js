@@ -40,16 +40,20 @@ class ScreenKeyboard {
       }
 
       el.addEventListener('focus', ScreenKeyboard.show)
+
       el.addEventListener('focusout', (e) => {
-        if (!e.explicitOriginalTarget.classList.contains('hg-button')) {
+        const target = e.relatedTarget || e.explicitOriginalTarget
+        if (target && target.classList && !target.classList.contains('hg-button')) {
           ScreenKeyboard.hide()
         }
       })
+
       el.addEventListener('change', (e) => {
         if (ScreenKeyboard.#keyboard) {
           ScreenKeyboard.#keyboard.setInput(e.currentTarget.value)
         }
       })
+
       el.dataset.keyboard_enabled = true
     })
   }
