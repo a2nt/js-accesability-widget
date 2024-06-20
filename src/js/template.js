@@ -34,9 +34,9 @@ const tpl = `<div class="asw-menu" style="display: none;" id="aswMenu">
                     <i class="fa-solid fa-volume-high"></i>
                     <span class="asw-translate">Speak on click</span>
                 </button>
-                <button class="asw-btn" type="button" onclick="window.ASM.redableText()">
+                <button class="asw-btn" type="button" onclick="window.ASM.ReadableText()">
                     <i class="fa-solid fa-font"></i>
-                    <span class="asw-translate">Redable Font</span>
+                    <span class="asw-translate">Readable Font</span>
                 </button>
                 <button class="asw-btn" type="button" onclick="window.ASM.adjustFontSize(0.1)">
                     <i class="fa-solid fa-plus"></i>
@@ -73,7 +73,7 @@ const tpl = `<div class="asw-menu" style="display: none;" id="aswMenu">
 
                 <button class="asw-btn" type="button"onclick="window.ASM.readability()">
                     <i class="fa-solid fa-newspaper"></i>
-                    <span class="asw-translate">Redable Mode</span>
+                    <span class="asw-translate">Readable Mode</span>
                 </button>
 
                 <button class="asw-btn" type="button"onclick="window.ASM.monochrome()">
